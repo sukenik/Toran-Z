@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "testing",
-    "slug": "testing",
+    "slug": "toran-z",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.suking.toranz"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ed8e240d-5a3f-4e41-accf-b7aa70e4c450"
+      }
+    },
+    "owner": "suking"
   }
 }
