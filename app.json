@@ -2,7 +2,7 @@
   "expo": {
     "name": "Toran-Z",
     "slug": "Toran-Z",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.suking.ToranZ"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0af22b2f-79f3-4b59-8430-81d56151dec8"
+      }
     }
   }
 }
