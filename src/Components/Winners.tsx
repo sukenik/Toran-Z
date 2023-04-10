@@ -30,26 +30,39 @@ const noWinnerText = 'את הפלי'
 
 interface iWinnersProps {
     users: iUser[]
+    darkTheme: boolean
 }
 
-const Winners: React.FC<iWinnersProps> = ({ users }) => {
+const Winners: React.FC<iWinnersProps> = ({ users, darkTheme }) => {
     const { currentWinner, prevWinner, nextWinner } = getWinners(users)
 
     return (
         <>
             <ScrollView contentContainerStyle={styles.contentContainer}>
                 <View>
-                    <Text style={styles.dutyName}>{'התורן הבא'}</Text>
-                    <Text style={styles.memberName}>{nextWinner.name ?? noWinnerText}</Text>
+                    <Text style={{ ...styles.dutyName, color: darkTheme ? 'white': 'black' }}>
+                        {'התורן הבא'}
+                    </Text>
+                    <Text style={{ ...styles.memberName, color: darkTheme ? 'white': 'black' }}>
+                        {nextWinner.name ?? noWinnerText}
+                    </Text>
                 </View>
                 <View style={{ marginLeft: 110 }}>
-                    <Text style={styles.dutyName}>{'התורן הקודם'}</Text>
-                    <Text style={styles.memberName}>{prevWinner.name ?? noWinnerText}</Text>
+                    <Text style={{ ...styles.dutyName, color: darkTheme ? 'white': 'black' }}>
+                        {'התורן הקודם'}
+                    </Text>
+                    <Text style={{ ...styles.memberName, color: darkTheme ? 'white': 'black' }}>
+                        {prevWinner.name ?? noWinnerText}
+                    </Text>
                 </View>
             </ScrollView>
             <View style={{ marginBottom: 30 }}>
-                <Text style={styles.dutyName}>{'הזוכה'}</Text>
-                <Text style={styles.winnerName}>{currentWinner.name ?? noWinnerText}</Text>
+                <Text style={{ ...styles.dutyName, color: darkTheme ? 'white': 'black' }}>
+                    {'הזוכה'}
+                </Text>
+                <Text style={{ ...styles.winnerName, color: darkTheme ? 'white' : 'black' }}>
+                    {currentWinner.name ?? noWinnerText}
+                </Text>
             </View>
         </>
     )
