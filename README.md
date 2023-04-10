@@ -1,5 +1,6 @@
 # Toran-Z 2.0
 <img src="./assets/ToranV2snippet.png" height="300" />
+
 > Based upon the legendery Toran Zevel: 
 <img src="./assets/toran-zevel-1.0.jpeg" height="300" />
 
