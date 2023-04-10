@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "testing",
-    "slug": "testing",
-    "version": "1.0.0",
+    "name": "Toran-Z",
+    "slug": "Toran-Z",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -15,16 +15,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.suking.ToranZ"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.suking.ToranZ",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0af22b2f-79f3-4b59-8430-81d56151dec8"
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "testing",
+  "name": "toran-z",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -9,18 +9,20 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "expo": "~48.0.6",
+    "dayjs": "^1.11.7",
+    "expo": "~48.0.10",
+    "expo-dev-client": "~2.1.6",
+    "expo-splash-screen": "^0.18.1",
     "expo-status-bar": "~1.4.4",
+    "firebase": "^9.19.1",
     "react": "18.2.0",
-    "react-native": "0.71.3"
+    "react-native": "0.71.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@tsconfig/react-native": "^2.0.3",
-    "@types/jest": "^29.4.0",
-    "@types/react": "^18.0.28",
-    "@types/react-test-renderer": "^18.0.0",
-    "typescript": "^4.9.5"
+    "@types/react": "~18.0.14",
+    "react-native-dotenv": "^3.4.8",
+    "typescript": "^4.9.4"
   },
   "private": true
 }
