@@ -3,7 +3,6 @@ import { getFirestore } from 'firebase/firestore'
 import { API_KEY, APP_ID, AUTH_DOMAIN, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID } from '@env'
 
 const firebaseConfig = {
-	// TODO: how it will work with eas build? 
 	apiKey: API_KEY,
 	authDomain: AUTH_DOMAIN,
 	projectId: PROJECT_ID,

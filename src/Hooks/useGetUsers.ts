@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react'
 import { iUser } from '../Types/User'
 
 const useGetUsers = (): { loading: boolean, users: iUser[] } => {
-	const [loading, setLoading] = useState<boolean>(true)
-	const [users, setUsers] = useState<iUser[]>([])
+    const [loading, setLoading] = useState<boolean>(true)
+    const [users, setUsers] = useState<iUser[]>([])
 
     const getUsers = async () => {
         try {
@@ -29,7 +29,7 @@ const useGetUsers = (): { loading: boolean, users: iUser[] } => {
         getUsers()
     }, [])
 
-	return { loading, users }
+    return { loading, users }
 }
 
 export default useGetUsers
