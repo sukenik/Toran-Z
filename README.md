@@ -1,4 +1,15 @@
-# Based on the legendery Toran Zevel:
-![Toran Zevel 1.0](./assets/toran-zevel-1.0.jpeg)
+# Toran-Z 2.0
+<img src="./assets/ToranV2snippet.png" height="300" />
 
-## Credit to the author of Toran-zevel-1.0 @Hershko ❤️
+> Based upon the legendery Toran Zevel: 
+<img src="./assets/toran-zevel-1.0.jpeg" height="300" />
+
+# Features
+- 🧹 Know your zevel-shift instantly == clean office
+- 🌚 Dark-mode
+
+---
+- 👀 Bekarov... on your local appStore/playStore
+---
+
+# Credit to the author of Toran-zevel-1.0 @Hershko ❤️
