@@ -15,14 +15,16 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.suking.ToranZ"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.suking.ToranZ"
+      "package": "com.suking.ToranZ",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"

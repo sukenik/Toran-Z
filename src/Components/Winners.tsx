@@ -1,18 +1,14 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { getWinners } from '../Logic/users'
+import { iUser } from '../Types/User'
 
 const styles = StyleSheet.create({
     contentContainer: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'baseline',
-      flex: 1,
-      columnGap: 5
-    },
-    dutyContainer: {
         display: 'flex',
-    },
-    winnerContainer: {
-        top: 80
+        flexDirection: 'row',
+        alignItems: 'baseline',
+        flex: 1,
+        width: '90%'
     },
     dutyName: {
         fontSize: 25,
@@ -29,24 +25,34 @@ const styles = StyleSheet.create({
         fontFamily: 'Alef-Bold'
     }
 })
-  
-const Winners = () => {
-  return (
-    <ScrollView contentContainerStyle={styles.contentContainer}>
-        <View style={styles.dutyContainer}>
-            <Text style={styles.dutyName}>{'התורן הבא'}</Text>
-            <Text style={styles.memberName}>אלון</Text>
-        </View>
-        <View style={styles.winnerContainer}>
-            <Text style={styles.dutyName}>{'הזוכה'}</Text>
-            <Text style={styles.winnerName}>עמית</Text>
-        </View>
-        <View style={styles.dutyContainer}>
-            <Text style={styles.dutyName}>{'התורן הקודם'}</Text>
-            <Text style={styles.memberName}>סוקניק</Text>
-        </View>
-    </ScrollView>
-  )
+
+const noWinnerText = 'את הפלי'
+
+interface iWinnersProps {
+    users: iUser[]
+}
+
+const Winners: React.FC<iWinnersProps> = ({ users }) => {
+    const { currentWinner, prevWinner, nextWinner } = getWinners(users)
+
+    return (
+        <>
+            <ScrollView contentContainerStyle={styles.contentContainer}>
+                <View>
+                    <Text style={styles.dutyName}>{'התורן הבא'}</Text>
+                    <Text style={styles.memberName}>{nextWinner.name ?? noWinnerText}</Text>
+                </View>
+                <View style={{ marginLeft: 110 }}>
+                    <Text style={styles.dutyName}>{'התורן הקודם'}</Text>
+                    <Text style={styles.memberName}>{prevWinner.name ?? noWinnerText}</Text>
+                </View>
+            </ScrollView>
+            <View style={{ marginBottom: 30 }}>
+                <Text style={styles.dutyName}>{'הזוכה'}</Text>
+                <Text style={styles.winnerName}>{currentWinner.name ?? noWinnerText}</Text>
+            </View>
+        </>
+    )
 }
 
 export default Winners
