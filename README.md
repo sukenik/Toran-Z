@@ -7,4 +7,8 @@
 - Know your zevel-shift instantly == clean office
 - Dark-mode
 
+---
+- 👀 Bekarov... on your local appStore/playStore
+---
+
 # Credit to the author of Toran-zevel-1.0 @Hershko ❤️
