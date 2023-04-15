@@ -30,37 +30,37 @@ const noWinnerText = 'את הפלי'
 
 interface iWinnersProps {
     users: iUser[]
-    darkTheme: boolean
+    textColor: string
 }
 
-const Winners: React.FC<iWinnersProps> = ({ users, darkTheme }) => {
+const Winners: React.FC<iWinnersProps> = ({ users, textColor }) => {
     const { currentWinner, prevWinner, nextWinner } = getWinners(users)
 
     return (
         <>
             <ScrollView contentContainerStyle={styles.contentContainer}>
                 <View>
-                    <Text style={{ ...styles.dutyName, color: darkTheme ? 'white': 'black' }}>
-                        {'התורן הבא'}
+                    <Text style={{ ...styles.dutyName, color: textColor }}>
+                        {'התורן הקודם'}
                     </Text>
-                    <Text style={{ ...styles.memberName, color: darkTheme ? 'white': 'black' }}>
-                        {nextWinner.name ?? noWinnerText}
+                    <Text style={{ ...styles.memberName, color: textColor }}>
+                        {prevWinner.name ?? noWinnerText}
                     </Text>
                 </View>
                 <View style={{ marginLeft: 110 }}>
-                    <Text style={{ ...styles.dutyName, color: darkTheme ? 'white': 'black' }}>
-                        {'התורן הקודם'}
+                    <Text style={{ ...styles.dutyName, color: textColor }}>
+                        {'התורן הבא'}
                     </Text>
-                    <Text style={{ ...styles.memberName, color: darkTheme ? 'white': 'black' }}>
-                        {prevWinner.name ?? noWinnerText}
+                    <Text style={{ ...styles.memberName, color: textColor }}>
+                        {nextWinner.name ?? noWinnerText}
                     </Text>
                 </View>
             </ScrollView>
             <View style={{ marginBottom: 30 }}>
-                <Text style={{ ...styles.dutyName, color: darkTheme ? 'white': 'black' }}>
+                <Text style={{ ...styles.dutyName, color: textColor }}>
                     {'הזוכה'}
                 </Text>
-                <Text style={{ ...styles.winnerName, color: darkTheme ? 'white' : 'black' }}>
+                <Text style={{ ...styles.winnerName, color: textColor }}>
                     {currentWinner.name ?? noWinnerText}
                 </Text>
             </View>

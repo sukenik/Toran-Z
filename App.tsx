@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    direction: 'rtl'
   },
   image: {
     height: '50%',
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
     fontSize: 50,
     fontFamily: 'Alef-Bold',
     marginTop: 20, 
-    marginLeft: 70 
+    marginRight: 70
   },
   darkThemeIcon: {
     height: 40,
@@ -58,28 +59,29 @@ export default function App() {
   }
 
   const toggleDarkTheme = () => setDarkTheme(prevState => !prevState)
+  const textColor = darkTheme ? 'white': 'black'
   
   return (
-    <View 
+    <View
       style={{ ...styles.container, backgroundColor: darkTheme ? 'black' : 'white' }} 
       onLayout={onLayoutRootView}
     >
       <View style={styles.headerContainer}>
-        <Pressable 
+        <Text style={{ ...styles.appName, color: textColor }}>
+          {'תורן פח 2.0'}
+        </Text>
+        <Pressable
           onPress={toggleDarkTheme} 
           style={{ ...styles.darkThemeIcon, marginTop: 35 }}
         >
-          <Image 
+          <Image
             source={darkTheme ? require('./assets/sun.png') : require('./assets/moon.png')} 
             style={styles.darkThemeIcon} 
           />
         </Pressable>
-        <Text style={{ ...styles.appName, color: darkTheme ? 'white': 'black' }}>
-          {'תורן פח 2.0'}
-        </Text>
       </View>
       <Image source={require('./assets/toran-zevel-2.0.jpeg')} style={styles.image} />
-      { !loading && <Winners users={users} darkTheme={darkTheme} /> }
+      { !loading && <Winners users={users} textColor={textColor} /> }
     </View>
   )
 }

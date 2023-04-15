@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
     "expo": "~48.0.10",
-    "expo-dev-client": "~2.1.6",
+    "expo-constants": "^14.2.1",
+    "expo-dev-client": "~2.2.1",
     "expo-splash-screen": "^0.18.1",
     "expo-status-bar": "~1.4.4",
     "firebase": "^9.19.1",
@@ -21,7 +23,6 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.0.14",
-    "react-native-dotenv": "^3.4.8",
     "typescript": "^4.9.4"
   },
   "private": true
