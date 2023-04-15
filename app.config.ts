@@ -33,7 +33,7 @@ export default {
         backgroundColor: '#ffffff'
       },
       package: 'com.suking.ToranZ',
-      versionCode: 2
+      versionCode: 3
     },
     web: {
       favicon: './assets/favicon.png'
